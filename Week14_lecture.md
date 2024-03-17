@@ -1,4 +1,5 @@
 # Gen 349 - Week 14 - Programming for Biologists
+
 # Basic UNIX Tutorial
 
 **Original material by [Shane Dooley](https://github.com/skDooley/shell_tutorial) and Dr. Geetu Tuteja.
@@ -7,9 +8,12 @@ Modified and compiled by Ha Vu (Tuteja Lab).**
 ## Outline
 0. Some installations
 1. Introduction to UNIX
-2. Basic essential programs
-3. Examining files on the command line
-4. Conclusion
+2. Accessing HPC
+3. Navigating Directories
+4. Creating and Destroying files
+5. Shortcuts, wild cards, and tab completion
+6. Examining files on the command line
+7. Conclusion
 
 
     
@@ -88,7 +92,7 @@ Then put in your Net ID password.
 
 Next, we have to request a Class partition. Please copy paste the following command to your terminal:
 
-    salloc -p class-long -N 1 -n 4 -t 3:00:00 -A s2024.gen.349.1
+    salloc -p instruction -N 1 -n 4 -t 15 -A s2024.gen.349.1
     
 ### How to paste to terminal:
 - If you are in Mac terminal: `Command + V`
@@ -107,7 +111,7 @@ Once the partition is granted, it will prompt some messages similar to the follo
 
 Now, copy and paste the command below to your terminal: 
 
-    git clone --single-branch --branch Gen349 https://github.com/hhvu0102/unix_basic.git
+    git clone --single-branch --branch Gen349 https://github.com/Tuteja-Lab/gen349_week_14_15.git
 
 
 ### Tips
@@ -157,7 +161,7 @@ Now, copy and paste the command below to your terminal:
 - `cd` = change directory.
 - Helps you navigate between different directories.
 
-Now, let's navigate to the directory `lecture`: `cd /home/krkies/unix_basic/lecture/` (replace `krkies` with your NetID).
+Now, let's navigate to the directory `lecture`: `cd /home/krkies/gen349_week_14_15/lecture/` (replace `krkies` with your NetID).
 
 Recheck where you are: `pwd`
 
@@ -183,8 +187,8 @@ Adapted from https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/
     
     
 - A path is either relative or absolute:
-    - An absolute path = the root element and the complete directory list. For example, `/home/krkies/unix_basic` is an absolute path. An absolute path always starts with `/`.
-    - A relative path needs to be combined with another path in order to access a file. For example, `unix_basic/lecture` is a relative path.
+    - An absolute path = the root element and the complete directory list. For example, `/home/krkies/gen349_week_14_15` is an absolute path. An absolute path always starts with `/`.
+    - A relative path needs to be combined with another path in order to access a file. For example, `gen349_week_14_15/lecture` is a relative path.
 
 <img src="/images/pathExample.png" width="500" height="400"/>
 
@@ -196,7 +200,7 @@ Adapted from https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/
 
 #### Question time!
 1. There's a directory called `hearingData` under the directory `lecture`.
-- How would you go to the directory if you are currently in `unix_basic` directory?
+- How would you go to the directory if you are currently in `gen349_week_14_15` directory?
 - How would do go regardless of your current location?
 
 2. Which files listed below are in the `hearingData` directory?
@@ -247,7 +251,7 @@ You cannot `rm testdir` here. Why?
 - If there is no file with the name pattern `*md` in the directory, it will throw an error `ls: cannot access *md: No such file or directory`.
     
 #### Question time!
-1. Do this command: `ls ~/unix_basic/lecture/hearingData/*4*2*`. What do you observe from the patterns of the file names?
+1. Do this command: `ls ~/gen349_week_14_15/lecture/hearingData/*4*2*`. What do you observe from the patterns of the file names?
 
 
 ### Tab Completion
@@ -255,9 +259,9 @@ You cannot `rm testdir` here. Why?
 
     `cd u<tab>`
     
-- The shell will fill in the rest of the directory name for `unix_basic`. Now enter:
+- The shell will fill in the rest of the directory name for `gen349_week_14_15`. Now enter:
 
-    `ls ~/unix_basic/lecture/Diverse<tab><tab>`
+    `ls ~/gen349_week_14_15/lecture/Diverse<tab><tab>`
     
 - When you hit the first tab, nothing happens. The reason is that there are multiple files in the `lecture` directory which start with `Diverse`. Thus, the shell does not know which one to fill in. When you hit tab again, the shell will list the possible choices.
 - Tab completion can also fill in the names of programs. For example, enter `e<tab><tab>`. You will see the name of every program that starts with an `e`. One of those is `echo`. To quit out of the program list, hit `q`.
@@ -283,7 +287,7 @@ Let's go to the directory `lecture`!
 - Displays contents of file on screen.
     - For example:
 
-        `cat ~/unix_basic/lecture/Diverse-test.txt`
+        `cat ~/gen349_week_14_15/lecture/Diverse-test.txt`
         
     - This will display the entire file at once. So it will look overwhelming if you have a big file!
 - If you put two file names, it will display the first file, followed by the 2nd file.
@@ -349,7 +353,7 @@ Let's go to the directory `lecture`!
     
 #### Question time!
 1. If I want to count the number of words in a file, what `-flag` should I use?
-2. How many words are there in the file `~/unix_basic/lecture/hearingData/Data0526`?
+2. How many words are there in the file `~/gen349_week_14_15/lecture/hearingData/Data0526`?
 
 ### Redirect data `>` to a file
 - The following command puts the output on the screen.

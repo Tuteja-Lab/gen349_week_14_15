@@ -1,4 +1,4 @@
-# Week 15 - BEDTools
+# Week 15 - BEDTools - Programming for Biologists
 
 ## BEDTools overview
 
