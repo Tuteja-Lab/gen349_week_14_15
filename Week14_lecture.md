@@ -6,25 +6,24 @@
 Modified and compiled by Ha Vu (Tuteja Lab).**
 
 ## Outline
-0. Some installations
-1. Introduction to UNIX
-2. Accessing HPC
-3. Navigating Directories
-4. Creating and Destroying files
+0. Introduction to UNIX
+1. Accessing HPC
+2. Navigating Directories
+3. Creating and Destroying files
 5. Shortcuts, wild cards, and tab completion
 6. Examining files on the command line
 7. Conclusion
 
 
     
-## Some installations
-### Connect to VPN
-
-*Make sure you have access to either Putty, or Terminal. If you don't, tell us!**
-
-
 ## Before we begin
-**Please take notes of the commands!** Suggested format:
+
+### Connect to ISU WiFi or VPN
+
+*Make sure you have access to either Putty, or Terminal. If you don't, tell us!*
+
+### Take notes of commands we go through
+Suggested format:
 
 | Command | What it does | Example |
 |:-:|:-:|:-:|
