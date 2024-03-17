@@ -110,7 +110,7 @@ Once the partition is granted, it will prompt some messages similar to the follo
 
 Now, copy and paste the command below to your terminal: 
 
-    git clone --single-branch --branch Gen349 https://github.com/Tuteja-Lab/gen349_week_14_15.git
+    git clone https://github.com/Tuteja-Lab/gen349_week_14_15.git
 
 
 ### Tips
