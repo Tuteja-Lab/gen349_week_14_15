@@ -172,7 +172,7 @@ Once the partition is granted, it will prompt some messages similar to the follo
 - `cd` = change directory.
 - Helps you navigate between different directories.
 
-Now, let's navigate to the directory `lecture`: `cd /home/krkies/gen349_week_14_15/lecture/` (replace `krkies` with your NetID).
+Now, let's navigate to the directory `lecture`: `cd /work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/lecture` (replace `krkies` with your NetID).
 
 Recheck where you are: `pwd`
 
@@ -198,7 +198,7 @@ Adapted from https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/
     
     
 - A path is either relative or absolute:
-    - An absolute path = the root element and the complete directory list. For example, `/home/krkies/gen349_week_14_15` is an absolute path. An absolute path always starts with `/`.
+    - An absolute path = the root element and the complete directory list. For example, `/work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/` is an absolute path. An absolute path always starts with `/`.
     - A relative path needs to be combined with another path in order to access a file. For example, `gen349_week_14_15/lecture` is a relative path.
 
 <img src="/images/pathExample.png" width="500" height="400"/>
