@@ -73,10 +73,10 @@ If you are on Putty, put the information as in the picture here:
 Replace `hhvu` with your own NetID.
 
 If you are on MACS Terminal, do this:
-```
-ssh your-net-id@nova.its.iastate.edu
-```
-
+	```
+	ssh your-net-id@nova.its.iastate.edu
+	```
+	
 For example: `ssh hhvu@nova.its.iastate.edu` (replace `hhvu` with your own NetID).
 
 Type the GA code from the app on your device when "Verification code:" is prompted.
@@ -108,9 +108,21 @@ Once the partition is granted, it will prompt some messages similar to the follo
 
 ### Cloning the GitHub Repository
 
-Now, copy and paste the command below to your terminal: 
+- Copy and Paste the commands below to your terminal.
+- Navigate to the classtmp/ directory
 
-    git clone https://github.com/Tuteja-Lab/gen349_week_14_15.git
+``` cd /work/classtmp/GEN349_S2024/ ```
+
+- Make a directory named with your ISU NetID. 
+
+```mkdir krkies``` Note: Replace krkies with your ISU NetID
+
+- Navigate into your new directory: 
+```cd krkies/```
+
+- Clone the GitHub repository for today's class. 
+
+    ```git clone https://github.com/Tuteja-Lab/gen349_week_14_15.git```
 
 
 ### Tips
