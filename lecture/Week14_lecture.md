@@ -122,7 +122,7 @@ Once the partition is granted, it will prompt some messages similar to the follo
 
 - Clone the GitHub repository for today's class. 
 
-    ```git clone https://github.com/Tuteja-Lab/gen349_week_14_15.git```
+    ```git clone --single-branch --branch main https://github.com/Tuteja-Lab/gen349_week_14_15.git```
 
 
 ### Tips
