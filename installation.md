@@ -57,11 +57,11 @@ Type the GA code from the app on your device when "Verification code:" is prompt
 
 Then put in your Net ID password. Note that no characters will show in the terminal while you are typing your password. Click enter once you finish typing in the password.
 
-Next, we have to request a Class partition. Please copy paste the following command to your terminal:
+Next, we have to request interactive access to a compute node in instruction partition. Please copy paste the following command to your terminal:
 ```
 salloc -p instruction -N 1 -n 4 -t 15 -A s2024.gen.349.1
 ```
 
-Once the partition is granted, it will prompt some messages similar to the following:
+Once the access is granted, it will prompt some messages similar to the following:
 
 <img src="/images/class-partition.PNG" width="950" height="110" />
