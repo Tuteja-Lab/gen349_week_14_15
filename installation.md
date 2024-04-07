@@ -59,7 +59,7 @@ Then put in your Net ID password. Note that no characters will show in the termi
 
 Next, we have to request interactive access to a compute node in instruction partition. Please copy paste the following command to your terminal:
 ```
-salloc -p instruction -N 1 -n 4 -t 15 -A s2024.gen.349.1
+salloc -p instruction -N 1 -n 4 -t 3:00:00 -A s2024.gen.349.1
 ```
 
 Once the access is granted, it will prompt some messages similar to the following:

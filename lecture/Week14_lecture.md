@@ -8,9 +8,10 @@ Modified and compiled by Ha Vu (Tuteja Lab).**
 ## Outline
 0. Introduction to UNIX
 1. Accessing HPC
-2. Navigating Directories
-3. Creating and Destroying files
-5. Shortcuts, wild cards, and tab completion
+2. General structure of a command in Unix
+3. Navigating Directories
+4. Creating and Destroying files
+5. Shortcuts
 6. Examining files on the command line
 7. Conclusion
 
@@ -18,9 +19,8 @@ Modified and compiled by Ha Vu (Tuteja Lab).**
     
 ## Before we begin
 
-### Connect to ISU WiFi or VPN
 
-*Make sure you have access to either Putty, or Terminal. If you don't, tell us!*
+### *Make sure you have access to either Putty, or Terminal. If you don't, tell us!*
 
 ### Take notes of commands we go through
 Suggested format:
@@ -65,39 +65,51 @@ UNIX is useful...
 - when you want to automate repetitive tasks.
 
 ## Accessing HPC class and some notes
-Now we will connect to the HPC class for today's tutorial.
+Now we will connect to the HPC class for today's tutorial. Make sure to always follow these steps when working on class material. 
+
+### Step 1: Connect to ISU Wifi or VPN (if off campus)
+
+* Note an ISU guest Wifi will not work. For example: IASTATE-Guest
+
+### Step 2: Connect to Nova
+
+#### Windows:
 If you are on Putty, put the information as in the picture here:
 
 <img src="/images/hpc-class.PNG" width="360" height="350" />
 
 Replace `hhvu` with your own NetID.
 
-If you are on MACS Terminal, do this:
-	```
-	ssh your-net-id@nova.its.iastate.edu
-	```
-	
-For example: `ssh hhvu@nova.its.iastate.edu` (replace `hhvu` with your own NetID).
+#### MACS:
+Open the Terminal and copy and paste the command below and replace `your-net-id` with your own NetID:
 
+```
+ssh your-net-id@nova.its.iastate.edu
+```
+	
+#### Enter Verification code
 Type the GA code from the app on your device when "Verification code:" is prompted.
 
 * Note: No characters will show in the terminal while you are typing. 
 
 <img src="/images/verify.PNG" width="490" height="125" />
 
-Then put in your Net ID password. 
+#### Enter your Net ID password.
 
 * Note: No characters will show in the terminal while you are typing your password.
 
-Next, we have to request a Class partition. Please copy paste the following command to your terminal:
+### Step 3: Request interactive access to a compute node in instruction partition
+Please copy paste the following command to your terminal:
 
-    salloc -p instruction -N 1 -n 4 -t 15 -A s2024.gen.349.1
+```
+salloc -p instruction -N 1 -n 4 -t 3:00:00 -A s2024.gen.349.1
+```
     
-### How to paste to terminal:
+#### How to paste to terminal:
 - If you are in Mac terminal: `Command + V`
 - If you are in Putty: `Right click`
 
-### How to copy from terminal to other program:
+#### How to copy from terminal to other program:
 - If you are in Mac terminal: highlight the text and then hit `Command + C`.
 - If you are in Putty: highlight the phrase to copy.
 
@@ -106,31 +118,36 @@ Once the partition is granted, it will prompt some messages similar to the follo
 <img src="/images/class-partition.PNG" width="950" height="110" />
 
 
-### Cloning the GitHub Repository
+## Cloning the GitHub Repository
 
 - Copy and Paste the commands below to your terminal.
-- Navigate to the classtmp/ directory
+- Navigate to the `classtmp/` directory
 
-``` cd /work/classtmp/GEN349_S2024/ ```
+
+	``` cd /work/classtmp/GEN349_S2024/ ```
 
 - Make a directory named with your ISU NetID. 
 
-```mkdir krkies``` Note: Replace krkies with your ISU NetID
+	```mkdir krkies``` 
+
+	Note: Replace `krkies` with your ISU NetID
 
 - Navigate into your new directory: 
-```cd krkies/```
+	```cd krkies/```
 
 - Clone the GitHub repository for today's class. 
 
     ```git clone --single-branch --branch main https://github.com/Tuteja-Lab/gen349_week_14_15.git```
 
 
+## Things to Remember!
 ### Tips
 - Attention to detail is important.
     - Capitalization matters.
     - Spaces matter.
     - Semi colon, commas matter.
 - Don’t try to rush through everything.
+- If you get overwhelmed, take a deep breath and try again. You got this!
 
 ### If you have questions:
 - Tell us if you need us to slow down.
@@ -172,7 +189,7 @@ Once the partition is granted, it will prompt some messages similar to the follo
 - `cd` = change directory.
 - Helps you navigate between different directories.
 
-Now, let's navigate to the directory `lecture`: `cd /work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/lecture` (replace `krkies` with your NetID).
+Now, let's navigate to the directory `lecture` replacing replace `krkies` with your NetID: `cd /work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/lecture` 
 
 Recheck where you are: `pwd`
 
@@ -249,11 +266,7 @@ You cannot `rm testdir` here. Why?
 * Make sure you ALWAYS know what you are deleting BEFORE you delete it!  
 * `rm -r` HAS GIVEN ME NIGHTMARES. BE CAREFUL! 
 
-## Shortcuts, wild cards, and tab completion
-### Tilde ~
-- `~` = a shortcut for your home directory.
-- For example:
-    `ls ~`
+## Shortcuts
    
 ### Wild card
 - The `*` character matches against any set of characters.
@@ -261,36 +274,45 @@ You cannot `rm testdir` here. Why?
     `ls *md`
 - If there is no file with the name pattern `*md` in the directory, it will throw an error `ls: cannot access *md: No such file or directory`.
     
-#### Question time!
-1. Do this command: `ls ~/gen349_week_14_15/lecture/hearingData/*4*2*`. What do you observe from the patterns of the file names?
+	#### Question time!
+	1. Do this command: `ls /gen349_week_14_15/lecture/hearingData/*4*2*`. What do you observe from the patterns of the file names?
 
 
 ### Tab Completion
-- Navigate to the home directory. Typing out directory names can waste a lot of time. When you start typing out the name of a directory, then hit the tab key, the shell will try to fill in the rest of the directory name. For example, enter:
+- Typing out directory names can waste a lot of time. When you start typing out the name of a directory, then hit the tab key, the shell will try to fill in the rest of the directory name. For example, enter:
 
-    `cd u<tab>`
+    `cd g<tab>`
     
 - The shell will fill in the rest of the directory name for `gen349_week_14_15`. Now enter:
 
-    `ls ~/gen349_week_14_15/lecture/Diverse<tab><tab>`
+    `ls /lecture/Diverse<tab><tab>`
     
 - When you hit the first tab, nothing happens. The reason is that there are multiple files in the `lecture` directory which start with `Diverse`. Thus, the shell does not know which one to fill in. When you hit tab again, the shell will list the possible choices.
 - Tab completion can also fill in the names of programs. For example, enter `e<tab><tab>`. You will see the name of every program that starts with an `e`. One of those is `echo`. To quit out of the program list, hit `q`.
 - If you enter `ec<tab>` you will see that tab completion works immediately, because there is only one program name starting with `ec`.
 
 ### clear
-Sometimes your terminal is filled with past commands/outputs, and you want to have a clean terminal to avoid confusion. Then, you can do:
 
+* Sometimes your terminal is filled with past commands/outputs, and you want to have a clean terminal to avoid confusion. Then, you can do:
+
+    ```
     clear
+    ```
 
-or hit `Ctrl + l`.
+	or hit `Ctrl + l`.
 
-You can still scroll up to see past commands/outputs.
+* You can still scroll up using the up arrow key to see past commands/outputs.
 
 ### Quick check:
 If I want to go to the directory `lecture` but I don't know where I am now, what should I do?
 
 Let's go to the directory `lecture`!
+
+* If you are not sure how to get there from your current directory you can always use this command:
+
+```
+cd /work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/lecture/
+```
     
 ## Examining files on the command line
 ### cat
@@ -298,13 +320,19 @@ Let's go to the directory `lecture`!
 - Displays contents of file on screen.
     - For example:
 
-        `cat ~/gen349_week_14_15/lecture/Diverse-test.txt`
+        `cat file1.bed`
         
     - This will display the entire file at once. So it will look overwhelming if you have a big file!
 - If you put two file names, it will display the first file, followed by the 2nd file.
+	- For example:
+	
+		`cat file1.bed file2.bed`
 
 ### less
 - `less` opens the file, and lets you navigate through it.
+
+	``` less DiverseCas9s.faa ```
+
 - Use "space" to go forward and hit the "b" key to go backwards.
 - The "g" key goes to the beginning of the file and "G" (i.e., `shift + G`) goes to the end.
 - Finally, hit `q` to quit.
@@ -312,7 +340,7 @@ Let's go to the directory `lecture`!
 ### head
 - `head` writes the first ten lines of a file to the screen.
 - To change the number of lines printed, type `head -n <number> <file name>`.
-- **Make sure you are in the directory `lecture`**.
+- Make sure you are in the directory `lecture`.
 - Let's try: `head -n 5 DiverseCas9s.faa`
 
 ### tail
@@ -335,7 +363,7 @@ Let's go to the directory `lecture`!
 
     
 #### Question time!
-1. Read through the `man` page of `sort`. If I want to sort something **numerically**, what `-flag` should I use?
+1. Read through the `man` page of `sort`. If I want to sort something in  **reverse** order, what `-flag` should I use?
     <p> A. `-b` </p> 
     <p> B. `-i` </p>
     <p> C. `-r` </p>
@@ -364,7 +392,7 @@ Let's go to the directory `lecture`!
     
 #### Question time!
 1. If I want to count the number of words in a file, what `-flag` should I use?
-2. How many words are there in the file `~/gen349_week_14_15/lecture/hearingData/Data0526`?
+2. How many words are there in the file `hearingData/Data0526`?
 
 ### Redirect data `>` to a file
 - The following command puts the output on the screen.
@@ -387,7 +415,8 @@ Let's go to the directory `lecture`!
 - Save time and memory when programming!
 - For example:
     `grep 'protein_id=YP' DiverseCas9s.faa | wc -l`
-In this command, we search for every line that has the pattern `protein_id=YP` in the file `DiverseCas9s.faa`, then immediately count the number of such lines. The normal command of `wc` is `wc -l <input file>`, but here in the pipe, we only see `wc -l`, because the `<input file>` was piped directly from `grep 'protein_id=YP' DiverseCas9s.faa`.
+	- In this command, we search for every line that has the pattern `protein_id=YP` in the file `DiverseCas9s.faa`, then immediately count the number of such lines.
+	- The normal command of `wc` is `wc -l <input file>`, but here in the pipe, we only see `wc -l`, because the `<input file>` was piped directly from `grep 'protein_id=YP' DiverseCas9s.faa`.
 
 ## Conclusion
 - The ability to use and navigate with UNIX is essential.
