@@ -228,7 +228,7 @@ Adapted from https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/
 
 #### Question time!
 1. There's a directory called `hearingData` under the directory `lecture`.
-- How would you go to the directory if you are currently in `gen349_week_14_15` directory?
+- How would you go to the directory if you are currently in the `gen349_week_14_15` directory?
 - How would do go regardless of your current location?
 
 2. Which files listed below are in the `hearingData` directory?
