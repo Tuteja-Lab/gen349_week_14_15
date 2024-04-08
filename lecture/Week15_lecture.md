@@ -32,6 +32,9 @@ BEDTools is a software package that allows easy comparison of genomic data.
 	- When we want to explore `[OPTIONS]` of `bedtools intersect`, use the `flag` `-h`.
 	- For whatever file we put right after the flag `-a`, that file is called the A file in this tutorial.
 	- For whatever file we put right after the flag `-b`, that file is called the B file in this tutorial.
+
+<img src="/images/File1_2_diagram.PNG" />	
+	
 - For all the image examples, the red boxes mark the resulting intervals of the commands.
 
 #### Default behavior:
