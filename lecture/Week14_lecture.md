@@ -344,7 +344,7 @@ cd /work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/lecture/
 ### head
 - `head` writes the first ten lines of a file to the screen.
 - To change the number of lines printed, type `head -n <number> <file name>`.
-- Make sure you are in the directory `lecture`.
+- Make sure you are still in the directory `lecture`.
 - Let's try: `head -n 5 DiverseCas9s.faa`
 
 ### tail
