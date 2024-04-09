@@ -4,23 +4,23 @@
 
 BEDTools is a software package that allows easy comparison of genomic data.
 
-- Tasks that can be carried out with BEDtools are very common in genomic analysis
-- BEDTools is also available on Galaxy 
-- You may find yourself in a situation where it is easier to run BEDtools locally on your computer
-- Can integrate with other UNIX utilities (like `sort`, `wc`, etc)
-- Don’t need to upload, run and download from Galaxy
-- May not need the computational power of the Galaxy server for basic (but common) analysis
+- Tasks that can be performed using BEDtools are very common in genomic analysis.
+- BEDTools is available on Galaxy and Nova.
+- However, you may find that it is easier to run BEDtools locally on your computer because...
+	- BEDtools can be integrated with other UNIX utilities (like `sort`, `wc`, etc)
+	- Don’t need to upload, run and download from Galaxy
+	- May not need the computational power of the Galaxy server for basic (but common) analysis
 
 ## BEDTools documentation
 [http://bedtools.readthedocs.io/en/latest/index.html](http://bedtools.readthedocs.io/en/latest/index.html)
 
 ## bedtools intersect
 - First, do `module load bedtools2` (this command evokes the program `bedtools2` that has been installed on our cluster. Not all programs are pre-installed like this, but most of the popular ones are). 
-- **Every time you log in to your account, you need to load the module again.**
+- **Every time you log on to NOVA, you need to load the module again.**
 - Let us know when you are able to finish `module load bedtools2`.
 
 - Make sure you are in the directory `lecture`. Check where you are by doing `pwd`. 
-- If you are not in `lecture`, do `cd /home/<your netid>/unix_basic/lecture`.
+- If you are not in `lecture`, do `cd /work/classtmp/GEN349_S2024/<your-net-id>/gen349_week_14_15/lecture/`.
 
 ### `bedtools intersect` 
 - `bedtools intersect` allows one to screen for overlaps between two sets of genomic features.
