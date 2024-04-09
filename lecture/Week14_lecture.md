@@ -228,8 +228,8 @@ Adapted from https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/
 
 #### Question time!
 1. There's a directory called `hearingData` under the directory `lecture`.
-- How would you go to the directory if you are currently in `gen349_week_14_15` directory?
-- How would do go regardless of your current location?
+- How would you go to the directory if you are currently in the `gen349_week_14_15` directory?
+- How would you go to the directory regardless of your current location?
 
 2. Which files listed below are in the `hearingData` directory?
     <p> A. Data8355, Data7493, Data1235 </p>
@@ -275,17 +275,21 @@ You cannot `rm testdir` here. Why?
 - If there is no file with the name pattern `*md` in the directory, it will throw an error `ls: cannot access *md: No such file or directory`.
     
 	#### Question time!
-	1. Do this command: `ls /gen349_week_14_15/lecture/hearingData/*4*2*`. What do you observe from the patterns of the file names?
+	1. Make sure you are in the gen349_week_14_15 directory. Then, do this command: `ls lecture/hearingData/Data*4*2`. What do you observe from the patterns of the file names?
 
 
 ### Tab Completion
+- Navigate to your `classtmp/` directory (in the command below, replace 'krkies' with your ISU Net ID)
+
+	``` cd /work/classtmp/GEN349_S2024/krkies ```
+
 - Typing out directory names can waste a lot of time. When you start typing out the name of a directory, then hit the tab key, the shell will try to fill in the rest of the directory name. For example, enter:
 
     `cd g<tab>`
     
-- The shell will fill in the rest of the directory name for `gen349_week_14_15`. Now enter:
+- The shell will fill in the rest of the directory name for `gen349_week_14_15`. Once you change directories, enter:
 
-    `ls /lecture/Diverse<tab><tab>`
+    `ls lecture/Diverse<tab><tab>`
     
 - When you hit the first tab, nothing happens. The reason is that there are multiple files in the `lecture` directory which start with `Diverse`. Thus, the shell does not know which one to fill in. When you hit tab again, the shell will list the possible choices.
 - Tab completion can also fill in the names of programs. For example, enter `e<tab><tab>`. You will see the name of every program that starts with an `e`. One of those is `echo`. To quit out of the program list, hit `q`.
@@ -301,14 +305,14 @@ You cannot `rm testdir` here. Why?
 
 	or hit `Ctrl + l`.
 
-* You can still scroll up using the up arrow key to see past commands/outputs.
+* You can use the up arrow key to see past commands/outputs.
 
 ### Quick check:
 If I want to go to the directory `lecture` but I don't know where I am now, what should I do?
 
 Let's go to the directory `lecture`!
 
-* If you are not sure how to get there from your current directory you can always use this command:
+* If you are not sure how to get there from your current directory you can always use this command (but replace krkies with your ISU Net ID):
 
 ```
 cd /work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/lecture/
@@ -318,11 +322,11 @@ cd /work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/lecture/
 ### cat
 - `cat` = concatenate.
 - Displays contents of file on screen.
-    - For example:
+    - For example (from the `lecture` directory):
 
         `cat file1.bed`
         
-    - This will display the entire file at once. So it will look overwhelming if you have a big file!
+    - This will display the entire file at once. It will look overwhelming if you have a big file!
 - If you put two file names, it will display the first file, followed by the 2nd file.
 	- For example:
 	
@@ -340,7 +344,7 @@ cd /work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/lecture/
 ### head
 - `head` writes the first ten lines of a file to the screen.
 - To change the number of lines printed, type `head -n <number> <file name>`.
-- Make sure you are in the directory `lecture`.
+- Make sure you are still in the directory `lecture`.
 - Let's try: `head -n 5 DiverseCas9s.faa`
 
 ### tail
