@@ -305,7 +305,7 @@ You cannot `rm testdir` here. Why?
 
 	or hit `Ctrl + l`.
 
-* You can still scroll up using the up arrow key to see past commands/outputs.
+* You can use the up arrow key to see past commands/outputs.
 
 ### Quick check:
 If I want to go to the directory `lecture` but I don't know where I am now, what should I do?
