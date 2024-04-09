@@ -279,6 +279,10 @@ You cannot `rm testdir` here. Why?
 
 
 ### Tab Completion
+- Navigate to your `classtmp/` directory (in the command below, replace 'krkies' with your ISU Net ID)
+
+	``` cd /work/classtmp/GEN349_S2024/krkies ```
+
 - Typing out directory names can waste a lot of time. When you start typing out the name of a directory, then hit the tab key, the shell will try to fill in the rest of the directory name. For example, enter:
 
     `cd g<tab>`
