@@ -312,7 +312,7 @@ If I want to go to the directory `lecture` but I don't know where I am now, what
 
 Let's go to the directory `lecture`!
 
-* If you are not sure how to get there from your current directory you can always use this command:
+* If you are not sure how to get there from your current directory you can always use this command (but replace krkies with your ISU Net ID):
 
 ```
 cd /work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/lecture/
