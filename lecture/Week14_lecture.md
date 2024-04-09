@@ -326,7 +326,7 @@ cd /work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/lecture/
 
         `cat file1.bed`
         
-    - This will display the entire file at once. So it will look overwhelming if you have a big file!
+    - This will display the entire file at once. It will look overwhelming if you have a big file!
 - If you put two file names, it will display the first file, followed by the 2nd file.
 	- For example:
 	
