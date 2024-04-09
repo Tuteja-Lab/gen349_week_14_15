@@ -322,7 +322,7 @@ cd /work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/lecture/
 ### cat
 - `cat` = concatenate.
 - Displays contents of file on screen.
-    - For example:
+    - For example (from the `lecture` directory):
 
         `cat file1.bed`
         
