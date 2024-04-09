@@ -287,7 +287,7 @@ You cannot `rm testdir` here. Why?
 
     `cd g<tab>`
     
-- The shell will fill in the rest of the directory name for `gen349_week_14_15`. Now enter:
+- The shell will fill in the rest of the directory name for `gen349_week_14_15`. Once you change directories, enter:
 
     `ls /lecture/Diverse<tab><tab>`
     
