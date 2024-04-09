@@ -275,7 +275,7 @@ You cannot `rm testdir` here. Why?
 - If there is no file with the name pattern `*md` in the directory, it will throw an error `ls: cannot access *md: No such file or directory`.
     
 	#### Question time!
-	1. Do this command: `ls /gen349_week_14_15/lecture/hearingData/*4*2*`. What do you observe from the patterns of the file names?
+	1. Make sure you are in the gen349_week_14_15 directory. Then, do this command: `ls lecture/hearingData/*4*2*`. What do you observe from the patterns of the file names?
 
 
 ### Tab Completion
