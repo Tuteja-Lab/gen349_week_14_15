@@ -289,7 +289,7 @@ You cannot `rm testdir` here. Why?
     
 - The shell will fill in the rest of the directory name for `gen349_week_14_15`. Once you change directories, enter:
 
-    `ls /lecture/Diverse<tab><tab>`
+    `ls lecture/Diverse<tab><tab>`
     
 - When you hit the first tab, nothing happens. The reason is that there are multiple files in the `lecture` directory which start with `Diverse`. Thus, the shell does not know which one to fill in. When you hit tab again, the shell will list the possible choices.
 - Tab completion can also fill in the names of programs. For example, enter `e<tab><tab>`. You will see the name of every program that starts with an `e`. One of those is `echo`. To quit out of the program list, hit `q`.
