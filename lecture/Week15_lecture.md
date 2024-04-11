@@ -16,7 +16,7 @@ BEDTools is a software package that allows easy comparison of genomic data.
 
 ### Loading the BEDtools module
 - First, enter the command `module load bedtools2` (this command evokes the program `bedtools2` that has been installed on our cluster. Not all programs are pre-installed like this, but most of the popular ones are). 
-- **Every time you log on to NOVA, you need to load the module again.**
+- **Every time you log in to NOVA, you need to load the module again.**
 - Let us know when you are able to finish `module load bedtools2`.
 
 - Make sure you are in the directory `lecture`. Check where you are by doing `pwd`. 
