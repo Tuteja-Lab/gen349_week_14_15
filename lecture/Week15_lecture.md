@@ -41,7 +41,7 @@ BEDTools is a software package that allows easy comparison of genomic data.
 #### Default behavior:
 By default, if an overlap is found, `bedtools intersect` reports the shared interval between the two overlapping regions.
 
-For example, `bedtools intersect -a file1.bed -b file2.bed`
+For example, `bedtools intersect -a fileA.bed -b fileB.bed`
 
 What is the A file and B file in this case?
 
@@ -52,7 +52,7 @@ What is the A file and B file in this case?
 Instead, one can force `bedtools intersect` to report the original “A” feature when an overlap is found. As shown below, the entire “A” feature is reported, not just the portion that overlaps with the “B” feature.
 
 ```
-bedtools intersect -wa -a file1.bed -b file2.bed
+bedtools intersect -wa -a fileA.bed -b fileB.bed
 ```
 
 <img src="/images/bedtools-wa.PNG" />
@@ -61,7 +61,7 @@ bedtools intersect -wa -a file1.bed -b file2.bed
 Similarly, one can force bedtools intersect to report the original “B” feature when an overlap is found. If just -wb is used, the overlapping portion of A will be reported followed by the original “B”. 
 
 ```
-bedtools intersect -wb -a file1.bed -b file2.bed
+bedtools intersect -wb -a fileA.bed -b fileB.bed
 ```
 
 <img src="/images/bedtools-wb.PNG" />
@@ -69,19 +69,19 @@ bedtools intersect -wb -a file1.bed -b file2.bed
 #### Both -wa and -wb
 If both `-wa` and `-wb` are used, the originals of both “A” and “B” will be reported.
 ```
-bedtools intersect -wa -wb -a file1.bed -b file2.bed
+bedtools intersect -wa -wb -a fileA.bed -b fileB.bed
 ```
 
 #### -v
 Only report those entries in A that have no overlap in B.
 ```
-bedtools intersect -v -a file1.bed -b file2.bed
+bedtools intersect -v -a fileA.bed -b fileB.bed
 ```
 <img src="/images/bedtools-v.PNG" />
     
 #### -u
 Write original A entry once if any overlaps found in B. In other words, just report the fact at least one overlap was found in B.
 
-Try `bedtools intersect -wa -a file2.bed -b file1.bed` and `bedtools intersect -u -wa -a file2.bed -b file1.bed`. 
+Try `bedtools intersect -wa -a fileB.bed -b fileA.bed` and `bedtools intersect -u -wa -a fileB.bed -b fileA.bed`. 
 
 What's the difference?
