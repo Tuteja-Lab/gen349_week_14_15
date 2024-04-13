@@ -43,7 +43,6 @@ By default, if an overlap is found, `bedtools intersect` reports the shared inte
 
 For example, `bedtools intersect -a fileA.bed -b fileB.bed`
 
-What is the A file and B file in this case?
 
 <img src="/images/bedtools-default.PNG" />
 
