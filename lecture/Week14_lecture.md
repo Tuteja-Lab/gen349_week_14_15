@@ -324,13 +324,13 @@ cd /work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/lecture/
 - Displays contents of file on screen.
     - For example (from the `lecture` directory):
 
-        `cat file1.bed`
+        `cat fileA.bed`
         
     - This will display the entire file at once. It will look overwhelming if you have a big file!
 - If you put two file names, it will display the first file, followed by the 2nd file.
 	- For example:
 	
-		`cat file1.bed file2.bed`
+		`cat fileA.bed fileB.bed`
 
 ### less
 - `less` opens the file, and lets you navigate through it.
