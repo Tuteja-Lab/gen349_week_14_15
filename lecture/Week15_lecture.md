@@ -80,6 +80,7 @@ bedtools intersect -v -a fileA.bed -b fileB.bed
     
 #### -u
 Write original A entry once if any overlaps found in B. In other words, just report the fact at least one overlap was found in B.
+
 **Note** that in the example below, -a is file**B**.bed and -b is file**A**.bed
 
 Try `bedtools intersect -wa -a fileB.bed -b fileA.bed` and `bedtools intersect -u -wa -a fileB.bed -b fileA.bed`. 
