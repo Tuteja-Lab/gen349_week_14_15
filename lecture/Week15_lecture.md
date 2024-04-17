@@ -24,7 +24,7 @@ BEDTools is a software package that allows easy comparison of genomic data.
 	- Make sure to change `<your-net-id>` to YOUR NetID! 
 
 ### `bedtools intersect` 
-- `bedtools intersect` allows one to screen for overlaps between two sets of genomic features.
+- `bedtools intersect` allows one to identify overlaps between two sets of genomic features.
 - Usage:
 
 	```
