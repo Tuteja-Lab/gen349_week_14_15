@@ -4,7 +4,32 @@
 All of the following instructions are applicable for first time users of Nova. If you have accessed Nova before (in another class or in your research lab), it will not be necessary.
 
 ## Installation of necessary software
-### For Windows10/PC Users:
+### For PC Users:
+
+Depending on which version of Windows you are using, you may have to use a different application to connect to the HPC. To check which version of Windows you have follow these steps:
+
+1. Click the Start button
+2. Go to Settings
+3. Go to System
+4. Go to Abount
+5. Look under "Windows specifications" 
+
+
+#### For Users with Windows version > 10
+You will be using PowerShell. PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework. PowerShell runs on Windows, Linux, and macOS.
+
+Before installation, try searching for PowerShell on your Windows computer. 
+<img src="/images/windows_powershell.png" width="660" height="360" />
+
+Here is the recommended way to install PowerShell if it is not already installed:
+
+1. Search for the latest version of PowerShell using the published winget packages:
+```winget search Microsoft.PowerShell```
+
+2. Install PowerShell or PowerShell Preview using the `id` parameter
+```winget install --id Microsoft.PowerShell --source winget```
+
+#### Windows version < 10
 You need to install Putty. How to Install PuTTY:   
 1. Go to this Website to download the latest version of Putty: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html   
 2. There are two versions available for download:   
