@@ -1,4 +1,4 @@
-# Gen 349 - Week 14 - Programming for Biologists
+# GEN/BIOL 3490: Week 14 - Programming for Biologists
 # Instruction on how to access High Performance Computer (HPC) Class
 
 All of the following instructions are applicable for first time users of Nova. If you have accessed Nova before (in another class or in your research lab), it will not be necessary.
@@ -19,7 +19,7 @@ Depending on which version of Windows you are using, you may have to use a diffe
 You will be using PowerShell. PowerShell is a cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework. PowerShell runs on Windows, Linux, and macOS.
 
 Before installation, try searching for PowerShell on your Windows computer. 
-<img src="/images/windows_powershell.png" width="660" height="360" />
+<img src="/images/windows_powershell.png" width="790" height="644" />
 
 Here is the recommended way to install PowerShell if it is not already installed:
 
@@ -84,7 +84,7 @@ Then put in your Net ID password. Note that no characters will show in the termi
 
 Next, we have to request interactive access to a compute node in instruction partition. Please copy paste the following command to your terminal:
 ```
-salloc -p instruction -N 1 -n 4 -t 3:00:00 -A s2024.gen.349.1
+salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2025.gen.349.1
 ```
 
 Once the access is granted, it will prompt some messages similar to the following:
