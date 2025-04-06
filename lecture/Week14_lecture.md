@@ -1,9 +1,9 @@
-# Gen 349 - Week 14 - Programming for Biologists
+# GEN/BIOL 3490 Week 14: Programming for Biologists - UNIX
 
 # Basic UNIX Tutorial
 
 **Original material by [Shane Dooley](https://github.com/skDooley/shell_tutorial) and Dr. Geetu Tuteja.
-Modified and compiled by Ha Vu (Tuteja Lab).**
+Modified and compiled by [Ha Vu](https://github.com/hhvu0102/unix_basic) (Tuteja Lab).**
 
 ## Outline
 0. Introduction to UNIX
@@ -20,7 +20,7 @@ Modified and compiled by Ha Vu (Tuteja Lab).**
 ## Before we begin
 
 
-### *Make sure you have access to either Putty, or Terminal. If you don't, tell us!*
+### *Make sure you have been able access the class node on Nova. If you are having trouble with this, please tell us!*
 
 ### Take notes of commands we go through
 Suggested format:
@@ -54,8 +54,7 @@ Suggested format:
 #### MacOSX
 - More user friendly for beginners.
 
-### UNIX in Bioinformatics
-UNIX is useful...
+### UNIX is useful in bioinformatics...
 
 - when you are trying to open a large FASTQ file.
 - when you are searching for specific information from a large number of files.
@@ -74,14 +73,19 @@ Now we will connect to the HPC class for today's tutorial. Make sure to always f
 ### Step 2: Connect to Nova
 
 #### Windows:
-If you are on Putty, put the information as in the picture here:
+* If you are using PowerShell, copy and paste the command below. Be sure to replace `your-net-id` with your own NetID:
+
+```
+ssh your-net-id@nova.its.iastate.edu
+```
+
+* If you are using Putty, put the information as in the picture here. Replace `hhvu` with your own NetID.:
 
 <img src="/images/hpc-class.PNG" width="360" height="350" />
 
-Replace `hhvu` with your own NetID.
 
 #### MACS:
-Open the Terminal and copy and paste the command below and replace `your-net-id` with your own NetID:
+* Open the Terminal and copy and paste the command below and replace `your-net-id` with your own NetID:
 
 ```
 ssh your-net-id@nova.its.iastate.edu
@@ -102,16 +106,19 @@ Type the GA code from the app on your device when "Verification code:" is prompt
 Please copy paste the following command to your terminal:
 
 ```
-salloc -p instruction -N 1 -n 4 -t 3:00:00 -A s2024.gen.349.1
+salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2025.gen.3490.1
 ```
     
 #### How to paste to terminal:
-- If you are in Mac terminal: `Command + V`
-- If you are in Putty: `Right click`
+- PowerShell: `Ctrl + V`
+- Putty: `Right click`
+- Mac Terminal: `Command + V`
 
 #### How to copy from terminal to other program:
-- If you are in Mac terminal: highlight the text and then hit `Command + C`.
-- If you are in Putty: highlight the phrase to copy.
+- PowerShell: highlight the text and then hit  `Ctrl + C`
+- Putty: highlight the text to automaticall copy the text to Putty's clipboard.
+- Mac Terminal: highlight the text and then hit `Command + C`
+
 
 Once the partition is granted, it will prompt some messages similar to the following:
 
@@ -124,7 +131,7 @@ Once the partition is granted, it will prompt some messages similar to the follo
 - Navigate to the `classtmp/` directory
 
 
-	``` cd /work/classtmp/GEN349_S2024/ ```
+	``` cd /work/classtmp/GEN349_S2025/ ```
 
 - Make a directory named with your ISU NetID. 
 
@@ -165,7 +172,7 @@ Once the partition is granted, it will prompt some messages similar to the follo
 |  program | the name (case sensitive) of the program  | echo |
 |  argument | additional information you give the program to get it to do what you want it to do.  | hello world |    
 
-- Flags = options to run the program. Flags start with a single dash `-` or two dashes `--`, and change the behaviour of a command.
+- Flags = options to run the program. Flags start with a single dash `-` or two dashes `--`, and change the behavior of a command.
 
 
 ## Navigating Directories
@@ -189,19 +196,20 @@ Once the partition is granted, it will prompt some messages similar to the follo
 - `cd` = change directory.
 - Helps you navigate between different directories.
 
-Now, let's navigate to the directory `lecture` replacing replace `krkies` with your NetID: `cd /work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/lecture` 
+Now, let's navigate to the directory `lecture` replacing replace `krkies` with your NetID: `cd /work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/lecture` 
 
 Recheck where you are: `pwd`
 
 Check what is in the directory: `ls`
 
-### Root vs home; Relative vs. absolute path
+### Root vs home directory
 - Root = the first or top-most directory in a hierarchy. Sometimes you won't have full access in `root`, e.g., when you are on university's high performance clusters.
 - `home` directory is under the root.
 
 <img src="/images/absolutePathNames.jpg"/>
 Adapted from https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/
 
+### Relative vs. absolute path
 - Where you are in the directory tree is called your **path**.
 - In a path name, different directories and file names are separated by a slash `/`. The root has no name, so it's only one slash `/`.
     - For example:
@@ -214,9 +222,12 @@ Adapted from https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/
 	    ```
     
     
-- A path is either relative or absolute:
-    - An absolute path = the root element and the complete directory list. For example, `/work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/` is an absolute path. An absolute path always starts with `/`.
-    - A relative path needs to be combined with another path in order to access a file. For example, `gen349_week_14_15/lecture` is a relative path.
+- A path is either **relative** or **absolute**:
+    - An **absolute** path = the root element and the complete directory list. An absolute path always starts with `/`.
+    	* An example of an absolute path is: `/work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/`
+    	
+    - A **relative** path needs to be combined with another path in order to access a file.
+    	* An example of a relative path is: `gen349_week_14_15/lecture`
 
 <img src="/images/pathExample.png" width="500" height="400"/>
 
@@ -275,13 +286,13 @@ You cannot `rm testdir` here. Why?
 - If there is no file with the name pattern `*md` in the directory, it will throw an error `ls: cannot access *md: No such file or directory`.
     
 	#### Question time!
-	1. Make sure you are in the gen349_week_14_15 directory. Then, do this command: `ls lecture/hearingData/Data*4*2`. What do you observe from the patterns of the file names?
+	1. Make sure you are in the `gen349_week_14_15` directory. Then, do this command: `ls lecture/hearingData/Data*4*2`. What do you observe from the patterns of the file names?
 
 
 ### Tab Completion
 - Navigate to your `classtmp/` directory (in the command below, replace 'krkies' with your ISU Net ID)
 
-	``` cd /work/classtmp/GEN349_S2024/krkies ```
+	``` cd /work/classtmp/GEN349_S2025/krkies ```
 
 - Typing out directory names can waste a lot of time. When you start typing out the name of a directory, then hit the tab key, the shell will try to fill in the rest of the directory name. For example, enter:
 
@@ -315,7 +326,7 @@ Let's go to the directory `lecture`!
 * If you are not sure how to get there from your current directory you can always use this command (but replace krkies with your ISU Net ID):
 
 ```
-cd /work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/lecture/
+cd /work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/lecture/
 ```
     
 ## Examining files on the command line
@@ -350,7 +361,7 @@ cd /work/classtmp/GEN349_S2024/krkies/gen349_week_14_15/lecture/
 ### tail
 - `tail` writes the last ten lines of a file to the screen.
 - To change the number of lines printed, type `tail -n <number> <file name>`.
-    - For example, `tail -n 5 DiverseCas9s.faa`
+- For example, `tail -n 5 DiverseCas9s.faa`
     
 ### grep
 - `grep` can search files for specific words or patterns.

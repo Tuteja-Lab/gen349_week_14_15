@@ -11,7 +11,7 @@ Depending on which version of Windows you are using, you may have to use a diffe
 1. Click the Start button
 2. Go to Settings
 3. Go to System
-4. Go to Abount
+4. Go to About
 5. Look under "Windows specifications" 
 
 
@@ -84,7 +84,7 @@ Then put in your Net ID password. Note that no characters will show in the termi
 
 Next, we have to request interactive access to a compute node in instruction partition. Please copy paste the following command to your terminal:
 ```
-salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2025.gen.349.1
+salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2025.gen.3490.1
 ```
 
 Once the access is granted, it will prompt some messages similar to the following:
