@@ -103,11 +103,20 @@ Type the GA code from the app on your device when "Verification code:" is prompt
 * Note: No characters will show in the terminal while you are typing your password.
 
 ### Step 3: Request interactive access to a compute node in instruction partition
-Please copy paste the following command to your terminal:
 
-```
-salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2025.gen.3490.1
-```
+* Check with class you are registered for:
+
+	* If you are registered for GEN 3490, then you should copy and paste the following command to your terminal:
+
+	```
+	salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2025.gen.349.1
+	```
+	
+	* If you are registered for BIOL 3490, then you should copy and paste the following command to your terminal:
+
+	```
+	salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2025.biol.349.1
+	```
     
 #### How to paste into PowerShell/Putty/Mac:
 - PowerShell: `Ctrl + V`
