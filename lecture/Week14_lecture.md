@@ -109,12 +109,12 @@ Please copy paste the following command to your terminal:
 salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2025.gen.3490.1
 ```
     
-#### How to paste to terminal:
+#### How to paste into PowerShell/Putty/Mac:
 - PowerShell: `Ctrl + V`
 - Putty: `Right click`
 - Mac Terminal: `Command + V`
 
-#### How to copy from terminal to other program:
+#### How to copy from PowerShell/Putty/Mac:
 - PowerShell: highlight the text and then hit  `Ctrl + C`
 - Putty: highlight the text to automaticall copy the text to Putty's clipboard.
 - Mac Terminal: highlight the text and then hit `Command + C`
@@ -126,23 +126,23 @@ Once the partition is granted, it will prompt some messages similar to the follo
 
 
 ## Cloning the GitHub Repository
+Copy and Paste the commands below to your terminal.
 
-- Copy and Paste the commands below to your terminal.
-- Navigate to the `classtmp/` directory
+- Navigate to the `classtmp/GEN349_S2025/` directory:
 
 
 	``` cd /work/classtmp/GEN349_S2025/ ```
 
-- Make a directory named with your ISU NetID. 
+- Make a directory named with your ISU NetID:
 
 	```mkdir krkies``` 
 
-	Note: Replace `krkies` with your ISU NetID
+	**Note:** Replace `krkies` with your ISU NetID
 
 - Navigate into your new directory: 
 	```cd krkies/```
 
-- Clone the GitHub repository for today's class. 
+- Clone the GitHub repository for today's class:
 
     ```git clone --single-branch --branch main https://github.com/Tuteja-Lab/gen349_week_14_15.git```
 
