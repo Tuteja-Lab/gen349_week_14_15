@@ -41,18 +41,19 @@ Suggested format:
     
 <img src="/images/SHELL.png" width="500" height="400"/>
 
-### UNIX based operating systems
+### UNIX based operating systems	
+**Linux**
 
-#### Linux
-- Operating system and bundled application programs.
-- Derived from Unix.
-- Linux is free (open source).
-- Linux is stable.
-- Linux systems are highly customizable.
-- **Computing clusters are all Linux based.**
+* Operating system and bundled application programs.
+* Derived from Unix.
+* Linux is free (open source).
+* Linux is stable.
+* Linux systems are highly customizable.
+**Computing clusters are all Linux based.**
 
-#### MacOSX
-- More user friendly for beginners.
+**MacOSX**
+
+* More user friendly for beginners.
 
 ### UNIX is useful in bioinformatics...
 
@@ -64,7 +65,13 @@ Suggested format:
 - when you want to automate repetitive tasks.
 
 ## Accessing HPC class and some notes
-Now we will connect to the HPC class for today's tutorial. Make sure to always follow these steps when working on class material. 
+* Now we will connect to the HPC class for today's tutorial.
+* Make sure to always follow these steps when working on class material.
+* Below are the commands you should use to paste the commands into PowerShell, Putty, and Mac:
+	* PowerShell: `Ctrl + V`
+	* Putty: `Right click`
+	* Mac Terminal: `Command + V`
+	
 
 ### Step 1: Connect to ISU Wifi or VPN (if off campus)
 
@@ -72,64 +79,48 @@ Now we will connect to the HPC class for today's tutorial. Make sure to always f
 
 ### Step 2: Connect to Nova
 
-#### Windows:
-* If you are using PowerShell, copy and paste the command below. Be sure to replace `your-net-id` with your own NetID:
+**Windows:**
 
+* If you are using PowerShell, copy and paste the command below. Be sure to replace `your-net-id` with your own NetID:
 ```
 ssh your-net-id@nova.its.iastate.edu
 ```
-
 * If you are using Putty, put the information as in the picture here. Replace `hhvu` with your own NetID.:
 
 <img src="/images/hpc-class.PNG" width="360" height="350" />
 
+**MACS:**
 
-#### MACS:
 * Open the Terminal and copy and paste the command below and replace `your-net-id` with your own NetID:
-
 ```
 ssh your-net-id@nova.its.iastate.edu
 ```
-	
-#### Enter Verification code
-Type the GA code from the app on your device when "Verification code:" is prompted.
 
-* Note: No characters will show in the terminal while you are typing. 
+#### Step 2a: Enter Verification code
+
+* Type the google authenticator (GA) code from the app on your device when "Verification code:" is prompted.
+	* Note: No characters will show in the terminal while you are typing. 
 
 <img src="/images/verify.PNG" width="490" height="125" />
 
-#### Enter your Net ID password.
+#### Step 2b: Enter your Net ID password.
 
 * Note: No characters will show in the terminal while you are typing your password.
 
 ### Step 3: Request interactive access to a compute node in instruction partition
 
-* Check with class you are registered for:
+* Check which class you are registered for:
 
 	* If you are registered for GEN 3490, then you should copy and paste the following command to your terminal:
-
 	```
 	salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2025.gen.349.1
 	```
-	
 	* If you are registered for BIOL 3490, then you should copy and paste the following command to your terminal:
-
 	```
 	salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2025.biol.349.1
 	```
-    
-#### How to paste into PowerShell/Putty/Mac:
-- PowerShell: `Ctrl + V`
-- Putty: `Right click`
-- Mac Terminal: `Command + V`
 
-#### How to copy from PowerShell/Putty/Mac:
-- PowerShell: highlight the text and then hit  `Ctrl + C`
-- Putty: highlight the text to automaticall copy the text to Putty's clipboard.
-- Mac Terminal: highlight the text and then hit `Command + C`
-
-
-Once the partition is granted, it will prompt some messages similar to the following:
+* Once the partition is granted, it will prompt some messages similar to the following:
 
 <img src="/images/class-partition.PNG" width="950" height="110" />
 
@@ -140,13 +131,11 @@ Copy and Paste the commands below to your terminal.
 - Navigate to the `classtmp/GEN349_S2025/` directory:
 
 
-	``` cd /work/classtmp/GEN349_S2025/ ```
+	```cd /work/classtmp/GEN349_S2025/```
 
-- Make a directory named with your ISU NetID:
+- Make a directory named with your ISU NetID. **Note:** Replace `krkies` with your ISU NetID:
 
 	```mkdir krkies``` 
-
-	**Note:** Replace `krkies` with your ISU NetID
 
 - Navigate into your new directory: 
 	```cd krkies/```
@@ -158,6 +147,16 @@ Copy and Paste the commands below to your terminal.
 
 ## Things to Remember!
 ### Tips
+
+* Use the commands below to **paste** a command **into** PowerShell/Putty/Mac:
+	* PowerShell: `Ctrl + V`
+	* Putty: `Right click`
+	* Mac Terminal: `Command + V`
+* Use the commands below to **copy** text **from**  PowerShell/Putty/Mac into a different location:
+	* PowerShell: highlight the text and then hit  `Ctrl + C`
+	* Putty: highlight the text to automaticall copy the text to Putty's clipboard.
+	* Mac Terminal: highlight the text and then hit `Command + C`
+
 - Attention to detail is important.
     - Capitalization matters.
     - Spaces matter.
@@ -166,7 +165,7 @@ Copy and Paste the commands below to your terminal.
 - If you get overwhelmed, take a deep breath and try again. You got this!
 
 ### If you have questions:
-- Tell us if you need us to slow down.
+- Let us know if we need to slow down.
 - If you move faster than us, wait to ask your question until we get to the part you are on.
 
 ## General structure of a command in Unix
@@ -196,8 +195,10 @@ Copy and Paste the commands below to your terminal.
 
 ### ls
 - `ls` = list the files in the current directory.
-- Another option: add flags to `ls`.
-    - For example: `ls -l` 
+- A flag can be added to `ls` to list the files in different ways. For example, we can add the `-1` flag to force the output to list the files in the current directory with one entry per line.
+    - Try it out: `ls -1`
+   
+    
 - To explore all options to run `ls`, type `man ls`.
 - Within the `man` page, use arrow keys to move up/down/left/right. To quit the `man` page, hit `q`.
 
@@ -205,11 +206,11 @@ Copy and Paste the commands below to your terminal.
 - `cd` = change directory.
 - Helps you navigate between different directories.
 
-Now, let's navigate to the directory `lecture` replacing replace `krkies` with your NetID: `cd /work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/lecture` 
 
-Recheck where you are: `pwd`
-
-Check what is in the directory: `ls`
+### Quick check:
+* Now, let's navigate to the directory `lecture` replacing replace `krkies` with your NetID: `cd /work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/lecture` 
+* Recheck where you are: `pwd`
+* Check what is in the directory: `ls`
 
 ### Root vs home directory
 - Root = the first or top-most directory in a hierarchy. Sometimes you won't have full access in `root`, e.g., when you are on university's high performance clusters.
@@ -247,12 +248,13 @@ Adapted from https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/
 - When we do `cd`, this will put us back to the `home` directory.
 
 #### Question time!
-1. There's a directory called `hearingData` under the directory `lecture`.
-- How would you go to the directory if you are currently in the `gen349_week_14_15` directory?
-- How would you go to the directory regardless of your current location?
 
-2. Which files listed below are in the `hearingData` directory?
-    <p> A. Data8355, Data7493, Data1235 </p>
+* There's a directory called `hearingData` under the directory `lecture`.
+
+1. How would you go to the directory if you are currently in the `gen349_week_14_15` directory?
+2. How would you go to the directory regardless of your current location?
+3. Which files listed below are in the `hearingData` directory?
+    <p> A. Data8355, Data7493, Data1235 <p>
     <p> B. Data0335, Data0492, Data0225 </p>
 
 
@@ -281,7 +283,14 @@ rm testdir
 You cannot `rm testdir` here. Why?
 
 ### `rm -r` 
-`rm -r` will remove non-empty directories and all the files within them. 
+
+* `rm -r` will remove non-empty directories and all the files within them. 
+* For example:
+
+	```
+	rm -r testdir
+	ls
+	```
 
 * Make sure you ALWAYS know what you are deleting BEFORE you delete it!  
 * `rm -r` HAS GIVEN ME NIGHTMARES. BE CAREFUL! 
@@ -293,17 +302,19 @@ You cannot `rm testdir` here. Why?
 - For example, the following command list all the files in our current directory that contain "md" at the end of the file names:
     `ls *md`
 - If there is no file with the name pattern `*md` in the directory, it will throw an error `ls: cannot access *md: No such file or directory`.
-    
+
 	#### Question time!
-	1. Make sure you are in the `gen349_week_14_15` directory. Then, do this command: `ls lecture/hearingData/Data*4*2`. What do you observe from the patterns of the file names?
+	* Make sure you are in the `gen349_week_14_15` directory.
+	* Then, do this command: `ls lecture/hearingData/Data*4*2`.
+	* What do you observe from the patterns of the file names?
 
 
 ### Tab Completion
-- Navigate to your `classtmp/` directory (in the command below, replace 'krkies' with your ISU Net ID)
+- Navigate to your `classtmp/GEN349_S2025/` directory (in the command below, replace `krkies` with your ISU Net ID)
 
-	``` cd /work/classtmp/GEN349_S2025/krkies ```
+	``` cd /work/classtmp/GEN349_S2025/krkies```
 
-- Typing out directory names can waste a lot of time. When you start typing out the name of a directory, then hit the tab key, the shell will try to fill in the rest of the directory name. For example, enter:
+- Typing out directory names can waste a lot of time. When you start typing out the name of a directory, then hit the "tab" key, the shell will try to fill in the rest of the directory name. For example, enter:
 
     `cd g<tab>`
     
@@ -317,45 +328,32 @@ You cannot `rm testdir` here. Why?
 
 ### clear
 
-* Sometimes your terminal is filled with past commands/outputs, and you want to have a clean terminal to avoid confusion. Then, you can do:
-
-    ```
-    clear
-    ```
-
-	or hit `Ctrl + l`.
+* Sometimes your terminal is filled with past commands/outputs, and you want to have a clean terminal to avoid confusion. Then, you can do: `clear` or hit `Ctrl + l`.
 
 * You can use the up arrow key to see past commands/outputs.
 
-### Quick check:
-If I want to go to the directory `lecture` but I don't know where I am now, what should I do?
+## Quick check:
+* If I want to go to the directory `lecture` but I don't know where I am now, what should I do?
+* Let's go to the directory `lecture`!
+	* If you are not sure how to get there from your current directory you can always use this command (but replace `krkies` with your ISU Net ID):
 
-Let's go to the directory `lecture`!
-
-* If you are not sure how to get there from your current directory you can always use this command (but replace krkies with your ISU Net ID):
-
-```
-cd /work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/lecture/
-```
+		```
+		cd /work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/lecture/
+		```
     
 ## Examining files on the command line
 ### cat
 - `cat` = concatenate.
 - Displays contents of file on screen.
-    - For example (from the `lecture` directory):
-
-        `cat fileA.bed`
+    - For example (from the `lecture` directory): `cat fileA.bed`
         
     - This will display the entire file at once. It will look overwhelming if you have a big file!
 - If you put two file names, it will display the first file, followed by the 2nd file.
-	- For example:
-	
-		`cat fileA.bed fileB.bed`
+	- For example: `cat fileA.bed fileB.bed`
 
 ### less
-- `less` opens the file, and lets you navigate through it.
-
-	``` less DiverseCas9s.faa ```
+- `less` lets you open the file and navigate through it.
+	- For example: `less DiverseCas9s.faa `
 
 - Use "space" to go forward and hit the "b" key to go backwards.
 - The "g" key goes to the beginning of the file and "G" (i.e., `shift + G`) goes to the end.
@@ -364,13 +362,14 @@ cd /work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/lecture/
 ### head
 - `head` writes the first ten lines of a file to the screen.
 - To change the number of lines printed, type `head -n <number> <file name>`.
-- Make sure you are still in the directory `lecture`.
-- Let's try: `head -n 5 DiverseCas9s.faa`
+- Let's try an example:
+	- First, make sure you are still in the directory `lecture`.
+	- Next, enter the command: `head -n 5 DiverseCas9s.faa`
 
 ### tail
 - `tail` writes the last ten lines of a file to the screen.
 - To change the number of lines printed, type `tail -n <number> <file name>`.
-- For example, `tail -n 5 DiverseCas9s.faa`
+- For example: `tail -n 5 DiverseCas9s.faa`
     
 ### grep
 - `grep` can search files for specific words or patterns.
@@ -380,24 +379,25 @@ cd /work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/lecture/
     
 ### sort
 - `sort` provides different options to sort a file.
-- For example, `sort DiverseCas9s-names.txt` will sort the file `DiverseCas9s-names.txt` alphabetically based on the first column.
+- For example: `sort DiverseCas9s-names.txt` will sort the file `DiverseCas9s-names.txt` alphabetically based on the first column.
 - If your file has multiple columns, you can use `-k` and the column number to sort by another column than the first (default).
 - For more options in `sort`, type `man sort` or `sort --help` (`-h` may not work in this case). Reminder: to exit the `man` page when doing `man sort`, hit `q`.
 - Note: `sort -n` will compare according to numerical value, but it cannot understand the value of scientific notation such as `6E+10`.
 
     
-#### Question time!
-1. Read through the `man` page of `sort`. If I want to sort something in  **reverse** order, what `-flag` should I use?
-    <p> A. `-b` </p> 
-    <p> B. `-i` </p>
-    <p> C. `-r` </p>
-    <p> D. `-n` </p>
+	#### Question time!
+	1. Read through the `man` page of `sort`. If I want to sort something in  **reverse** order, what `-flag` should I use?
+	    <p> A. `-b` </p> 
+	    <p> B. `-i` </p>
+	    <p> C. `-r` </p>
+	    <p> D. `-n` </p>
 	
 
 ### uniq
 - `uniq` can be used to identify lines that occur uniquely in a file (`-u`), lines that are duplicated in a file (`-d`), or to count the number of occurrences in a file (`-c`)
-- Without any options, it is similar to `sort -u` (which only keeps unique entries).
-- Files must be sorted before running this command.
+-  Files must be sorted before running this command.
+-  Without any options, the result is the same as using `sort -u` (which only keeps unique entries).
+
 
 ### cut
 - `cut` can be used to print only selected columns from a file.
@@ -414,12 +414,12 @@ cd /work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/lecture/
 
     `wc -l DiverseCas9s.faa`
     
-#### Question time!
-1. If I want to count the number of words in a file, what `-flag` should I use?
-2. How many words are there in the file `hearingData/Data0526`?
+	#### Question time!
+	1. If I want to count the number of words in a file, what `-flag` should I use?
+	2. How many words are there in the file `hearingData/Data0526`?
 
 ### Redirect data `>` to a file
-- The following command puts the output on the screen.
+- The following command prints the output on the screen.
 
     `grep "gbkey=CDS" DiverseCas9s.faa`
 
@@ -439,8 +439,8 @@ cd /work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/lecture/
 - Save time and memory when programming!
 - For example:
     `grep 'protein_id=YP' DiverseCas9s.faa | wc -l`
-	- In this command, we search for every line that has the pattern `protein_id=YP` in the file `DiverseCas9s.faa`, then immediately count the number of such lines.
-	- The normal command of `wc` is `wc -l <input file>`, but here in the pipe, we only see `wc -l`, because the `<input file>` was piped directly from `grep 'protein_id=YP' DiverseCas9s.faa`.
+	- In this command, we search for every line that has the pattern `protein_id=YP` in the file `DiverseCas9s.faa`.
+	- This output is then piped directly to the command `wc -l` to immediately count the number lines within `DiverseCas9s.faa` that match the pattern `protein_id=YP`.
 
 ## Conclusion
 - The ability to use and navigate with UNIX is essential.
