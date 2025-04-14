@@ -128,10 +128,10 @@ ssh your-net-id@nova.its.iastate.edu
 ## Cloning the GitHub Repository
 Copy and Paste the commands below to your terminal.
 
-- Navigate to the `classtmp/` directory:
+- Navigate to the `classtmp/GEN349_S2025/` directory:
 
 
-	```cd /work/classtmp/```
+	```cd /work/classtmp/GEN349_S2025/```
 
 - Make a directory named with your ISU NetID. **Note:** Replace `krkies` with your ISU NetID:
 
@@ -209,7 +209,7 @@ Copy and Paste the commands below to your terminal.
 
 
 ### Quick check:
-* Now, let's navigate to the directory `lecture` replacing replace `krkies` with your NetID: `cd /work/classtmp/krkies/gen349_week_14_15/lecture` 
+* Now, let's navigate to the directory `lecture` replacing replace `krkies` with your NetID: `cd /work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/lecture` 
 * Recheck where you are: `pwd`
 * Check what is in the directory: `ls`
 
@@ -235,7 +235,7 @@ Adapted from https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/
     
 - A path is either **relative** or **absolute**:
     - An **absolute** path = the root element and the complete directory list. An absolute path always starts with `/`.
-    	* An example of an absolute path is: `/work/classtmp/krkies/gen349_week_14_15/`
+    	* An example of an absolute path is: `/work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/`
     	
     - A **relative** path needs to be combined with another path in order to access a file.
     	* An example of a relative path is: `gen349_week_14_15/lecture`
@@ -311,9 +311,9 @@ You cannot `rm testdir` here. Why?
 
 
 ### Tab Completion
-- Navigate to your `classtmp/` directory (in the command below, replace `krkies` with your ISU Net ID)
+- Navigate to your `classtmp/GEN349_S2025/` directory (in the command below, replace `krkies` with your ISU Net ID)
 
-	``` cd /work/classtmp/krkies```
+	``` cd /work/classtmp/GEN349_S2025/krkies```
 
 - Typing out directory names can waste a lot of time. When you start typing out the name of a directory, then hit the "tab" key, the shell will try to fill in the rest of the directory name. For example, enter:
 
@@ -339,7 +339,7 @@ You cannot `rm testdir` here. Why?
 	* If you are not sure how to get there from your current directory you can always use this command (but replace `krkies` with your ISU Net ID):
 
 		```
-		cd /work/classtmp/krkies/gen349_week_14_15/lecture/
+		cd /work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/lecture/
 		```
     
 ## Examining files on the command line
