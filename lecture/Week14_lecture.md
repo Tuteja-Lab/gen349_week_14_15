@@ -89,7 +89,7 @@ ssh your-net-id@nova.its.iastate.edu
 
 <img src="/images/hpc-class.PNG" width="360" height="350" />
 
-**MACS:**
+**MacOSX:**
 
 * Open the Terminal and copy and paste the command below and replace `your-net-id` with your own NetID:
 ```
