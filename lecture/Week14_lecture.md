@@ -20,14 +20,13 @@ Modified and compiled by [Ha Vu](https://github.com/hhvu0102/unix_basic) (Tuteja
 ## Before we begin
 
 
-### *Make sure you have been able access the class node on Nova. If you are having trouble with this, please tell us!*
+* **Make sure you have been able access the class node on Nova. If you are having trouble with this, please tell us!**
+* Take notes of the commands as we go through the lecture using the suggested format below:
 
-### Take notes of commands we go through
-Suggested format:
 
-| Command | What it does | Example |
-|:-:|:-:|:-:|
-|  Command | What it does |  |
+	| Command | What it does | Example |
+	|:-:|:-:|:-:|
+	|  Command | What it does |  |
 
 ## Introduction to UNIX
 ### What is UNIX?
@@ -66,11 +65,14 @@ Suggested format:
 
 ## Accessing HPC class and some notes
 * Now we will connect to the HPC class for today's tutorial.
-* Make sure to always follow these steps when working on class material.
-* Below are the commands you should use to paste the commands into PowerShell, Putty, and Mac:
-	* PowerShell: `Ctrl + V`
-	* Putty: `Right click`
-	* Mac Terminal: `Command + V`
+* If this is your first time accessing the HPC, please follow these [instructions](https://github.com/Tuteja-Lab/gen349_week_14_15/blob/main/installation.md).
+* If this is NOT your first time accessing the HPC, continue following the steps listed on this page. 
+	* <u>**Make sure to always follow these steps when working on class material.**</u>
+	
+	* Below are the commands you should use to paste the commands into PowerShell, Putty, and Mac:
+		* PowerShell: `Ctrl + V`
+		* Putty: `Right click`
+		* Mac Terminal: `Command + V`
 	
 
 ### Step 1: Connect to ISU Wifi or VPN (if off campus)
@@ -79,22 +81,27 @@ Suggested format:
 
 ### Step 2: Connect to Nova
 
-**Windows:**
+**Windows version >= 10:**
 
-* If you are using PowerShell, copy and paste the command below. Be sure to replace `your-net-id` with your own NetID:
-```
-ssh your-net-id@nova.its.iastate.edu
-```
+* Copy and paste the command below into PowerShell. Be sure to replace `your-net-id` with your own NetID:
+
+	```
+	ssh your-net-id@nova.its.iastate.edu
+	```
+
+**Windows version < 10:**
+
 * If you are using Putty, put the information as in the picture here. Replace `hhvu` with your own NetID.:
-
-<img src="/images/hpc-class.PNG" width="360" height="350" />
+	
+	<img src="/images/hpc-class.PNG" width="360" height="350" />
 
 **MACS:**
 
 * Open the Terminal and copy and paste the command below and replace `your-net-id` with your own NetID:
-```
-ssh your-net-id@nova.its.iastate.edu
-```
+
+	```
+	ssh your-net-id@nova.its.iastate.edu
+	```
 
 #### Step 2a: Enter Verification code
 
@@ -128,7 +135,7 @@ ssh your-net-id@nova.its.iastate.edu
 ## Cloning the GitHub Repository
 Copy and Paste the commands below to your terminal.
 
-- Navigate to the `classtmp/GEN349_S2025/` directory:
+- Navigate to the `classtmp/` directory:
 
 
 	```cd /work/classtmp/GEN349_S2025/```
@@ -224,21 +231,23 @@ Adapted from https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/
 - Where you are in the directory tree is called your **path**.
 - In a path name, different directories and file names are separated by a slash `/`. The root has no name, so it's only one slash `/`.
     - For example:
-    	* Note: Command line will not recognize comments beginning with #. 		These are used for documentation.
     
 	    ```
 	    cd / 
 	    pwd
 	    ls #check what is in the root directory
 	    ```
+	    
+	 	* Note: Command line will not recognize comments beginning with #. These are used for documentation.
+
     
     
 - A path is either **relative** or **absolute**:
     - An **absolute** path = the root element and the complete directory list. An absolute path always starts with `/`.
-    	* An example of an absolute path is: `/work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/`
+    	* An example of an absolute path is `/work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/` (shown below in blue)
     	
     - A **relative** path needs to be combined with another path in order to access a file.
-    	* An example of a relative path is: `gen349_week_14_15/lecture`
+    	* An example of a relative path is`gen349_week_14_15/lecture` (circled in red)
 
 <img src="/images/pathExample.png" width="750" height="400"/>
 
@@ -311,7 +320,7 @@ You cannot `rm testdir` here. Why?
 
 
 ### Tab Completion
-- Navigate to your `classtmp/GEN349_S2025/` directory (in the command below, replace `krkies` with your ISU Net ID)
+- Navigate to your `classtmp/` directory (in the command below, replace `krkies` with your ISU Net ID)
 
 	``` cd /work/classtmp/GEN349_S2025/krkies```
 
