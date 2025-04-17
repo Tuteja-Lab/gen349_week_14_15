@@ -95,7 +95,7 @@ Modified and compiled by [Ha Vu](https://github.com/hhvu0102/unix_basic) (Tuteja
 	
 	<img src="/images/hpc-class.PNG" width="360" height="350" />
 
-**MACS:**
+**MacOSX:**
 
 * Open the Terminal and copy and paste the command below and replace `your-net-id` with your own NetID:
 
