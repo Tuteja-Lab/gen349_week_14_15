@@ -77,7 +77,7 @@ Modified and compiled by [Ha Vu](https://github.com/hhvu0102/unix_basic) (Tuteja
 
 ### Step 1: Connect to ISU Wifi or VPN (if off campus)
 
-* Note an ISU guest Wifi will not work. For example: IASTATE-Guest
+* Note if you are using ISU guest Wifi (IASTATE-Guest) you will need to connect to the VPN first. 
 
 ### Step 2: Connect to Nova
 
