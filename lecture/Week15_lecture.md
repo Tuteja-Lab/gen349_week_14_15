@@ -7,7 +7,7 @@ Modified and compiled by [Ha Vu](https://github.com/hhvu0102/unix_basic) (Tuteja
 
 BEDTools is a software package that allows easy comparison of genomic data.
 
-- Tasks that can be performed using BEDtools are very common in genomic analysis.
+- Tasks that can be done using BEDtools are very common in genomic analysis.
 - BEDTools is available on Galaxy and Nova.
 - However, you may find that it is easier to run BEDtools locally on your computer because...
 	- BEDtools can be integrated with other UNIX utilities (like `sort`, `wc`, etc)
