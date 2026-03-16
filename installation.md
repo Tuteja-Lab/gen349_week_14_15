@@ -104,13 +104,13 @@ After installing and initializing GA as described in the emailed instructions:
 	* If you are registered for GEN 3490, then you should copy and paste the following command to your terminal:
 
 		```
-		salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2025.gen.349.1
+		salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2026.gen.3490.01
 		```
 	
 	* If you are registered for BIOL 3490, then you should copy and paste the following command to your terminal:
 
 		```
-		salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2025.biol.349.1
+		salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2026.biol.3490.01
 		```
 
 	#### How to paste into PowerShell/Putty/Mac:
