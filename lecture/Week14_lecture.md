@@ -105,7 +105,7 @@ Modified and compiled by [Ha Vu](https://github.com/hhvu0102/unix_basic) (Tuteja
 
 #### Step 2a: Enter Verification code
 
-* Type the google authenticator (GA) code from the app on your device when "Verification code:" is prompted.
+* Type the MS Authenticator or google authenticator (GA) code from the app on your device when "Verification code:" is prompted.
 	* Note: No characters will show in the terminal while you are typing. 
 
 <img src="/images/verify.PNG" width="490" height="125" />
@@ -120,11 +120,11 @@ Modified and compiled by [Ha Vu](https://github.com/hhvu0102/unix_basic) (Tuteja
 
 	* If you are registered for GEN 3490, then you should copy and paste the following command to your terminal:
 	```
-	salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2025.gen.349.1
+	salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2026.gen.3490.01
 	```
 	* If you are registered for BIOL 3490, then you should copy and paste the following command to your terminal:
 	```
-	salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2025.biol.349.1
+	salloc --partition=instruction -N 1 -n 4 -t 3:00:00 --account=s2026.biol.3490.01
 	```
 
 * Once the partition is granted, it will prompt some messages similar to the following:
@@ -138,14 +138,14 @@ Copy and Paste the commands below to your terminal.
 - Navigate to the `classtmp/` directory:
 
 
-	```cd /work/classtmp/GEN349_S2025/```
+	```cd /work/classtmp/GEN3490_2026```
 
-- Make a directory named with your ISU NetID. **Note:** Replace `krkies` with your ISU NetID:
+- Make a directory named with your ISU NetID. **Note:** Replace `lamejia` with your ISU NetID:
 
-	```mkdir krkies``` 
+	```mkdir lamejia``` 
 
 - Navigate into your new directory: 
-	```cd krkies/```
+	```cd lamejia/```
 
 - Clone the GitHub repository for today's class:
 
@@ -216,7 +216,7 @@ Copy and Paste the commands below to your terminal.
 
 
 ### Quick check:
-* Now, let's navigate to the directory `lecture` replacing replace `krkies` with your NetID: `cd /work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/lecture` 
+* Now, let's navigate to the directory `lecture` replacing replace `lamejia` with your NetID: `cd /work/classtmp/GEN3490_2026/lamejia/gen349_week_14_15/lecture` 
 * Recheck where you are: `pwd`
 * Check what is in the directory: `ls`
 
@@ -244,7 +244,7 @@ Adapted from https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/
     
 - A path is either **relative** or **absolute**:
     - An **absolute** path = the root element and the complete directory list. An absolute path always starts with `/`.
-    	* An example of an absolute path is `/work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/` (shown below in blue)
+    	* An example of an absolute path is `/work/classtmp/GEN3490_2026/lamejia/gen349_week_14_15/` (shown below in blue)
     	
     - A **relative** path needs to be combined with another path in order to access a file.
     	* An example of a relative path is`gen349_week_14_15/lecture` (circled in red)
@@ -320,9 +320,9 @@ You cannot `rm testdir` here. Why?
 
 
 ### Tab Completion
-- Navigate to your `classtmp/` directory (in the command below, replace `krkies` with your ISU Net ID)
+- Navigate to your `classtmp/` directory (in the command below, replace `lamejia` with your ISU Net ID)
 
-	``` cd /work/classtmp/GEN349_S2025/krkies```
+	``` cd work/classtmp/GEN3490_2026/lamejia```
 
 - Typing out directory names can waste a lot of time. When you start typing out the name of a directory, then hit the "tab" key, the shell will try to fill in the rest of the directory name. For example, enter:
 
@@ -345,10 +345,10 @@ You cannot `rm testdir` here. Why?
 ## Quick check:
 * If I want to go to the directory `lecture` but I don't know where I am now, what should I do?
 * Let's go to the directory `lecture`!
-	* If you are not sure how to get there from your current directory you can always use this command (but replace `krkies` with your ISU Net ID):
+	* If you are not sure how to get there from your current directory you can always use this command (but replace `lamejia` with your ISU Net ID):
 
 		```
-		cd /work/classtmp/GEN349_S2025/krkies/gen349_week_14_15/lecture/
+		cd /work/classtmp/GEN3490_2026/lamejia/gen349_week_14_15/lecture/
 		```
     
 ## Examining files on the command line
