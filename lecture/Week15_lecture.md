@@ -24,7 +24,7 @@ BEDTools is a software package that allows easy comparison of genomic data.
 - Let us know when you complete the `module load bedtools2` command.
 
 - Make sure you are in the directory `lecture`. Check where you are with `pwd`. 
-- If you are not in the `lecture` directory, use the command `cd /work/classtmp/GEN349_S2025/<your-net-id>/gen349_week_14_15/lecture/`.
+- If you are not in the `lecture` directory, use the command `cd /work/classtmp/GEN349_2026/<your-net-id>/gen349_week_14_15/lecture/`.
 	- Make sure to change `<your-net-id>` to YOUR NetID! 
 
 ### `bedtools intersect` 
