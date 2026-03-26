@@ -53,7 +53,13 @@ https://it.engineering.iastate.edu/how-to/install-and-connect-to-vpn-mac/
 https://it.engineering.iastate.edu/how-to/install-and-connect-to-vpn-pc/  
 
 ## Accessing HPC class
-### Step 1: ssh to Nova for the first time
+### Step 1: access Nova OnDemand
+
+* First log into Nova OnDemand using this link: http://nova-ondemand.its.iastate.edu/
+* Select the MFA recovery option under the Clusters menu option.
+* Scan the QR code with an MFA app, such as MS Authenticator or Google Authenticator
+
+### Step 2: ssh to Nova for the first time
 
 * If you using PowerShell, type the following command into the PowerShell window:
 
@@ -83,8 +89,6 @@ If this is the first time you log onto Nova, it will respond with "host key not 
 * If you are on Putty, click `Accept`.
 
 At the first attempt to login a GA account will be created for you, and the email with the instructions will be sent to `<your-NetID>@iastate.edu`.
-
-### Step 2: follow the instruction as in the email from HPC class
 
 ### Step 3: Connecting to Nova
 After installing and initializing GA as described in the emailed instructions:
