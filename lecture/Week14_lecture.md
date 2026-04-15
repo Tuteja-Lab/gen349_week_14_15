@@ -21,7 +21,7 @@ Modified and compiled by [Ha Vu](https://github.com/hhvu0102/unix_basic) (Tuteja
 
 
 * **Make sure you have been able access the class node on Nova. If you are having trouble with this, please tell us!**
-* Take notes of the commands as we go through the lecture using the suggested format below:
+* Take notes of the commands as you go through the lecture using the suggested format below:
 
 
 	| Command | What it does | Example |
